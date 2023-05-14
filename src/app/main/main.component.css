@@ -1,7 +1,12 @@
 main {
     height: 100svh;
     overflow-x: hidden;
+    /* overflow-y: hidden; */
+}
+
+.overflow-left {
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .bg-gray {
@@ -9,27 +14,46 @@ main {
 }
 
 .chairOne {
-    top: 35%;
+    top: 25%;
     right: -10%;
 }
 
+.chairOneSmall {
+    top: 81%;
+    right: 23%;
+    width: 10%;
+}
+
+.chairTwoSmall {
+    top: 45%;
+    right: 95%;
+    width: 10%;
+}
+
+.chairThreeSmall {
+    top: 5%;
+    right: 30%;
+    width: 10%;
+    rotate: 180deg
+}
+
 .chairTwo {
-    rotate: 60deg;
-    top: 66%;
-    right: 0%;
+    rotate: 120deg;
+    top: 63%;
+    right: 45%;
 }
 
 .chairThree {
-    rotate: 120deg;
-    top: 60%;
-    left: -7%;
+    rotate: 240deg;
+    top: -14%;
+    left: 0%;
 }
 
 .image-div {
     height: 110%;
     position: relative;
-    top: -15%;
-    left: -25%;
+    top: -22%;
+    left: -45%;
     background-image: url('../../assets/images/Rectangle 10.png');
     background-size: contain;
     background-repeat: no-repeat;

@@ -1,17 +1,20 @@
 <main>
     <div class="row h-100">
-        <div class="col-6 p-0">
+        <div class="col-6 p-0 overflow-left">
             <div #rotatingDiv class="postion-relative image-div">
                 <!-- <img id="main-img" class="position-absolute" src="./../../assets/images/Rectangle 10.png"> -->
-                <img *ngIf="index===0" #chairOne class="position-absolute chairOne" src="assets/images/chair_one.png"
-                    alt="Loung Chair">
-                <img *ngIf="index===1" #chairTwo class="position-absolute chairTwo" src="assets/images/chair_two.png"
+                <img *ngIf="index===0" class="position-absolute chairOne" src="assets/images/chair_one.png"
+                    alt="Lounge Chair">
+                <img class="position-absolute chairOneSmall" src="assets/images/sphere_orange.png" alt="Lounge Chair">
+                <img *ngIf="index===1" class="position-absolute chairTwo" src="assets/images/chair_two.png"
                     alt="Relax Couch">
-                <img *ngIf="index===2" #chairThree class="position-absolute chairThree"
-                    src="assets/images/chair_three.png" alt="Living Couch">
+                <img class="position-absolute chairTwoSmall" src="assets/images/cube.png" alt="Relax Couch">
+                <img *ngIf="index===2" class="position-absolute chairThree" src="assets/images/chair_three.png"
+                    alt="Living Couch">
+                <img class="position-absolute chairThreeSmall" src="assets/images/donut.png" alt="Living Couch">
             </div>
         </div>
-        <div class="col-5 h-100 d-flex flex-column justify-content-center">
+        <div class="col-5 h-100 d-flex flex-column justify-content-center overflow-right">
             <p class="fs-1 fw-light w-25">My Storehouse</p>
             <p class="text-muted fs-4">
                 Products
@@ -20,9 +23,10 @@
                 <div class="col-12">
                     <div (click)="changeIndex(0)" class="card bg-gray border-0">
                         <div class="card-body">
-                            <div class="row align-items-center">
+                            <div class="row align-items-start">
                                 <div class="col-10">
                                     <p class="fs-5 mb-0">Lounge Chair</p>
+                                    <app-product-detail [data]="productData?.loungeChair"></app-product-detail>
                                 </div>
                                 <div class="col-2">
                                     <div
@@ -40,6 +44,7 @@
                             <div class="row align-items-center">
                                 <div class="col-10">
                                     <p class="fs-5 mb-0">Relax Couch</p>
+                                    <app-product-detail [data]="productData?.relaxCouch"></app-product-detail>
                                 </div>
                                 <div class="col-2">
                                     <div
@@ -57,6 +62,7 @@
                             <div class="row align-items-center">
                                 <div class="col-10">
                                     <p class="fs-5 mb-0">Living Couch</p>
+                                    <app-product-detail [data]="productData?.livingCouch"></app-product-detail>
                                 </div>
                                 <div class="col-2">
                                     <div

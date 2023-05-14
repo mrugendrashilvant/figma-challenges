@@ -3,16 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
-import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
+import { ProductDetailComponent } from './main/components/product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent
+    MainComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
-    NgbAccordionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

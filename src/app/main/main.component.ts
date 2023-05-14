@@ -9,6 +9,24 @@ export class MainComponent implements OnInit {
   @ViewChild('rotatingDiv') rotatingDiv: any;
   index: number = 0;
 
+  productData = {
+    loungeChair: {
+      show: false,
+      heading: "Description",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    relaxCouch: {
+      show: false,
+      heading: "Description",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    livingCouch: {
+      show: false,
+      heading: "Description",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    }
+  }
+
   constructor() { }
 
   ngOnInit(): void {
@@ -17,7 +35,7 @@ export class MainComponent implements OnInit {
   changeIndex(index: number) {
     this.index = index;
     console.log(this.rotatingDiv);
-    let rotateAmount = -(60 * index);
+    let rotateAmount = -((60 * 2) * index);
     console.log(rotateAmount.toString());
     this.rotatingDiv.nativeElement.style.rotate = rotateAmount.toString() + 'deg';
     if (index == 0) {
