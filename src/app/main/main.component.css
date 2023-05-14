@@ -1,0 +1,37 @@
+main {
+    height: 100svh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.bg-gray {
+    background-color: #D9D9D9;
+}
+
+.chairOne {
+    top: 35%;
+    right: -10%;
+}
+
+.chairTwo {
+    rotate: 60deg;
+    top: 66%;
+    right: 0%;
+}
+
+.chairThree {
+    rotate: 120deg;
+    top: 60%;
+    left: -7%;
+}
+
+.image-div {
+    height: 110%;
+    position: relative;
+    top: -15%;
+    left: -25%;
+    background-image: url('../../assets/images/Rectangle 10.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 1s;
+}

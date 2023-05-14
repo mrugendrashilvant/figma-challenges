@@ -1,5 +1,76 @@
-<div class="container">
-    <h1>
-        Hello world!
-    </h1>
-</div>
+<main>
+    <div class="row h-100">
+        <div class="col-6 p-0">
+            <div #rotatingDiv class="postion-relative image-div">
+                <!-- <img id="main-img" class="position-absolute" src="./../../assets/images/Rectangle 10.png"> -->
+                <img *ngIf="index===0" #chairOne class="position-absolute chairOne" src="assets/images/chair_one.png"
+                    alt="Loung Chair">
+                <img *ngIf="index===1" #chairTwo class="position-absolute chairTwo" src="assets/images/chair_two.png"
+                    alt="Relax Couch">
+                <img *ngIf="index===2" #chairThree class="position-absolute chairThree"
+                    src="assets/images/chair_three.png" alt="Living Couch">
+            </div>
+        </div>
+        <div class="col-5 h-100 d-flex flex-column justify-content-center">
+            <p class="fs-1 fw-light w-25">My Storehouse</p>
+            <p class="text-muted fs-4">
+                Products
+            </p>
+            <div class="row g-3">
+                <div class="col-12">
+                    <div (click)="changeIndex(0)" class="card bg-gray border-0">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-10">
+                                    <p class="fs-5 mb-0">Lounge Chair</p>
+                                </div>
+                                <div class="col-2">
+                                    <div
+                                        class="bg-light d-flex align-items-center justify-content-center p-2 rounded-2">
+                                        <img src="assets/images/small_chair_one.png" alt="Lounge Chair">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div (click)="changeIndex(1)" class="card bg-gray border-0">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-10">
+                                    <p class="fs-5 mb-0">Relax Couch</p>
+                                </div>
+                                <div class="col-2">
+                                    <div
+                                        class="bg-light d-flex align-items-center justify-content-center p-2 rounded-2">
+                                        <img src="assets/images/small_chair_two.png" alt="Relax Couch">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div (click)="changeIndex(2)" class="card bg-gray border-0">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-10">
+                                    <p class="fs-5 mb-0">Living Couch</p>
+                                </div>
+                                <div class="col-2">
+                                    <div
+                                        class="bg-light d-flex align-items-center justify-content-center p-2 rounded-2">
+                                        <img src="assets/images/small_chair_three.png" alt="Living Couch">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</main>
